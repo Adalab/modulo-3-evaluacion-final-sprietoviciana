@@ -1,3 +1,4 @@
+import "../scss/layout/CharacterDetail.scss";
 import { useParams } from "react-router";
 import PropTypes from "prop-types";
 
@@ -15,9 +16,13 @@ function CharacterDetail({ characters }) {
   }
 
   return (
-    <section>
-      <img src={character.photo} alt={character.name} />
-      <h3>{character.name}</h3>
+    <section className="section-character">
+      <img
+        className="section-character-img"
+        src={character.photo}
+        alt={character.name}
+      />
+      <h3 className="title-name">{character.name}</h3>
       <p>
         <b>Status: </b>
         {character.status}

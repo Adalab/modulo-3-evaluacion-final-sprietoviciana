@@ -1,0 +1,20 @@
+.section-character {
+  height: 600px;
+  background-color: rgb(17, 212, 189);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-character-img {
+  border-radius: 5%;
+  width: 400px;
+}
+.title-name {
+  font-size: 30px;
+}
+.title-name p {
+  font-size: 30px;
+}

@@ -12,12 +12,13 @@ function App() {
       .then((data) => {
         // console.log(data);
         const charactersData = data.results.map((character) => {
-          // console.log(character);
+          console.log(character);
           return {
             id: character.id,
             photo: character.image,
             name: character.name,
             specie: character.species,
+            episodes: character.episode.length,
           };
         });
         console.log(charactersData);

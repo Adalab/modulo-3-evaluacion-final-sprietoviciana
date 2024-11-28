@@ -10,14 +10,17 @@ function App() {
     fetch("https://rickandmortyapi.com/api/character")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         const charactersData = data.results.map((character) => {
+          // console.log(character);
           return {
+            id: character.id,
             photo: character.image,
             name: character.name,
             specie: character.species,
           };
         });
+        console.log(charactersData);
         return setCharacters(charactersData);
       });
   }, []);

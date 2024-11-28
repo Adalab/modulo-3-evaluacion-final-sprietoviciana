@@ -3,8 +3,10 @@ import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import { useState, useEffect } from "react";
 
+
 function App() {
   const [characters, setCharacters] = useState([]);
+  const [changeInput, setChangeInput] = useState("");
 
   useEffect(() => {
     fetch("https://rickandmortyapi.com/api/character")
@@ -26,11 +28,21 @@ function App() {
       });
   }, []);
 
+  const changeSearch = (value) => {
+    setChangeInput(value);
+  };
+
+  const filteredCharacter = characters.filter((character) => {
+    return character.name
+      .toLowerCase()
+      .includes(changeInput.toLocaleLowerCase());
+  });
+
   return (
     <>
       <h1>Rick and Morty</h1>
-      <Filter />
-      <CharacterList characters={characters} />
+      <Filter onChangeFilter={changeSearch} />
+      <CharacterList characters={filteredCharacter} />
     </>
   );
 }

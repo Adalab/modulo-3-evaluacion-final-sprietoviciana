@@ -8,10 +8,11 @@ function Filter({ onChangeFilter }) {
     event.preventDefault();
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">
+    <form className="form-character" onSubmit={handleSubmit}>
+      <label className="character" htmlFor="name">
         Busca tu personaje:
         <input
+          className="character-input"
           type="text"
           name="name"
           id="name"

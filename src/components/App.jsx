@@ -2,7 +2,8 @@ import "../scss/App.scss";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import { useState, useEffect } from "react";
-
+import CharacterDetail from "./CharacterDetail";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -21,9 +22,12 @@ function App() {
             name: character.name,
             specie: character.species,
             episodes: character.episode.length,
+            status: character.status,
+            origen: character.origen.name,
+
           };
         });
-        console.log(charactersData);
+        // console.log(charactersData);
         return setCharacters(charactersData);
       });
   }, []);
@@ -40,9 +44,23 @@ function App() {
 
   return (
     <>
-      <h1>Rick and Morty</h1>
-      <Filter onChangeFilter={changeSearch} />
-      <CharacterList characters={filteredCharacter} />
+      <header>
+        <h1>Rick and Morty</h1>
+      </header>
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Filter onChangeFilter={changeSearch} />
+                <CharacterList characters={filteredCharacter} />
+              </>
+            }
+          />
+         <Route path="/person/:idPerson" element ={<CharacterDetail />} />
+        </Routes>
+      </main>
     </>
   );
 }

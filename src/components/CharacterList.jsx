@@ -11,6 +11,7 @@ function CharacterList({ characters }) {
             photo={character.photo}
             name={character.name}
             specie={character.specie}
+            id={character.id}
           />
         );
       })}

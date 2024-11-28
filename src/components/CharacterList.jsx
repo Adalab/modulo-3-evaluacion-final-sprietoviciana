@@ -1,9 +1,10 @@
+import "../scss/layout/CharacterList.scss";
 import CharacterCard from "./CharacterCard";
 import PropTypes from "prop-types";
 
 function CharacterList({ characters }) {
   return (
-    <ul>
+    <ul className="list">
       {characters.map((character) => {
         return (
           <CharacterCard

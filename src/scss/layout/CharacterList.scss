@@ -1,0 +1,13 @@
+.list {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 10px;
+}
+.list li {
+  background-color: rgb(17, 212, 189);
+  text-align: center;
+  padding: 20px;
+}

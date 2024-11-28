@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../scss/layout/Filter.scss";
 
 function Filter({ onChangeFilter }) {
   const handleChangeImput = (event) => {
@@ -16,7 +17,6 @@ function Filter({ onChangeFilter }) {
           type="text"
           name="name"
           id="name"
-          placeholder="Ej: Morty"
           onChange={handleChangeImput}
         />
       </label>

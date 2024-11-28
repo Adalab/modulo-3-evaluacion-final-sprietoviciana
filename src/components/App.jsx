@@ -1,4 +1,5 @@
 import "../scss/App.scss";
+import Header from "./Header";
 import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import { useState, useEffect } from "react";
@@ -42,9 +43,7 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>Rick and Morty</h1>
-      </header>
+        <Header />
       <main>
         <Routes>
           <Route

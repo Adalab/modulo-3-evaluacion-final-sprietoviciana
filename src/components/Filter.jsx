@@ -8,6 +8,7 @@ function Filter({ onChangeFilter }) {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
+ 
   return (
     <form className="form-character" onSubmit={handleSubmit}>
       <label className="character" htmlFor="name">

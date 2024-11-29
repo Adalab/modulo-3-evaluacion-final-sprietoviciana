@@ -37,9 +37,7 @@ function App() {
 
   const filteredCharacter = characters
     .filter((character) => {
-      return character.name
-        .toLowerCase()
-        .includes(changeInput.toLocaleLowerCase());
+      return character.name.toLowerCase().includes(changeInput.toLowerCase());
     })
     .sort((a, b) => a.name.localeCompare(b.name));
 

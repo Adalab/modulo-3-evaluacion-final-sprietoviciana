@@ -1,6 +1,7 @@
 import "../scss/layout/CharacterDetail.scss";
 import { useParams } from "react-router";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function CharacterDetail({ characters }) {
   const { idPerson } = useParams();
@@ -16,6 +17,12 @@ function CharacterDetail({ characters }) {
   }
 
   return (
+<>
+    <Link to={"/"} className="back">
+    {" "}
+    <p className="back-a">Volver</p>
+  </Link>
+
     <section className="section-character">
       <img
         className="section-character-img"
@@ -39,6 +46,7 @@ function CharacterDetail({ characters }) {
         <b>Episodes: </b> {character.episodes}
       </p>
     </section>
+    </>
   );
 }
 

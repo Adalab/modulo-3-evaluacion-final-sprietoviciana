@@ -1,3 +1,12 @@
+.back {
+  color: rgb(17, 212, 189);
+  font-size: 30px;
+  background-color: black;
+}
+.back-a {
+  background-color: black;
+  text-align: center;
+}
 .section-character {
   height: 600px;
   background-color: rgb(17, 212, 189);
@@ -7,6 +16,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (min-width: 430px) and (max-width: 768px) {
+  }
 }
 .section-character-img {
   border-radius: 5%;

@@ -35,15 +35,17 @@ function App() {
     setChangeInput(value);
   };
 
-  const filteredCharacter = characters.filter((character) => {
-    return character.name
-      .toLowerCase()
-      .includes(changeInput.toLocaleLowerCase());
-  });
+  const filteredCharacter = characters
+    .filter((character) => {
+      return character.name
+        .toLowerCase()
+        .includes(changeInput.toLocaleLowerCase());
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <>
-        <Header />
+      <Header />
       <main>
         <Routes>
           <Route
